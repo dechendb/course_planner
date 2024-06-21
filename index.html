@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WELLESLEY/MIT COURSE CALENDAR</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <h3>WELLESLEY/MIT MANUAL COURSE CALENDAR BC I HATE WORKDAY RAHHH</h3>
+        <div class="header">
+            <button id="addClassBtn">Add Class</button>
+        </div>
+        <div class="schedule-container">
+            <div class="hours">
+                <!-- HOURS WILL BE DYNAICMALLY CREATED HERE -->
+            </div>
+            <div class="calendar">
+                <!-- CALENDAR STRUCTUER SHOUDL BE CREATED DYNAMICALLY -->
+            </div>
+        </div>
+        <div class="modal" id="classModal">
+            <div class="modal-content">
+                <span class="closeBtn">&times;</span>
+                <h2>Add/Edit Class</h2>
+                <form id="classForm">
+                    <label for="className">Class Name:</label>
+                    <input type="text" id="className" name="className" required>
+                    
+                    <label for="location">Location:</label>
+                    <input type="text" id="location" name="location" required>
+                    
+                    <label for="days">Days:</label>
+                    <select multiple id="days" name="days" required>
+                        <option value="Monday">Monday</option>
+                        <option value="Tuesday">Tuesday</option>
+                        <option value="Wednesday">Wednesday</option>
+                        <option value="Thursday">Thursday</option>
+                        <option value="Friday">Friday</option>
+                    </select>
+                    <small>HOLD COMMAND (MAC) TO SELECT MULTIPLE DAYS</small>
+                    
+                    <label for="startTime">Start Time:</label>
+                    <input type="time" id="startTime" name="startTime" required>
+                    
+                    <label for="endTime">End Time:</label>
+                    <input type="time" id="endTime" name="endTime" required>
+                    
+                    <label for="notes">Notes:</label>
+                    <textarea id="notes" name="notes"></textarea>
+                    
+                    <label for="color">Color (Hex Code):</label>
+                    <input type="text" id="color" name="color" placeholder="#000000" required>
+                    
+                    <button type="submit">Save</button>
+                    <button type="button" id="deleteBtn">Delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

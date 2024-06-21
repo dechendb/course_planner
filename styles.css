@@ -1,0 +1,115 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    margin: 20px;
+}
+
+.schedule-container {
+    display: flex;
+    width: 80%;
+}
+
+.hours {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 10px;
+}
+
+.hour {
+    height: 60px; /* Each hour slot will be 60px tall */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+    border-top: 1px solid #ccc;
+    width: 50px;
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    flex-grow: 1;
+}
+
+.calendar .day {
+    border: 1px solid #ccc;
+    padding: 10px;
+    height: 900px; /* 15 hours * 60px each */
+    position: relative;
+}
+
+.class-block {
+    position: absolute;
+    width: 100%;
+    padding: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 400px;
+    position: relative;
+}
+
+.closeBtn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+select[multiple] {
+    height: auto;
+    min-height: 100px;
+}
+
+form#classForm {
+    display: flex;
+    flex-direction: column;
+}
+
+form#classForm label {
+    margin-top: 10px;
+}
+
+form#classForm input,
+form#classForm select,
+form#classForm textarea,
+form#classForm button {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+form#classForm small {
+    display: block;
+    margin-top: -5px;
+    margin-bottom: 10px;
+}
